@@ -23,7 +23,7 @@ Description
 •	Different (especially student-created) sprites
 •	Music and sound effects
 •	Extra enemies (especially with interesting behaviors)
-Report player’s health
+•	Report player’s health
 
 ## References
 
