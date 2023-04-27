@@ -5,7 +5,7 @@
 
 Description
 
-  A 2D Platformer game with three levels. 
+  A 2D Platformer game with fantasy theme
 
 ## Implementation
 
