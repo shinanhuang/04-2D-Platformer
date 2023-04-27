@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Enemy/Enemy_Flying.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemy/Enemy_Ground.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Levels/Portal.gd" type="Script" id=11]
 [ext_resource path="res://Assets/portal_start.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Child's Nightmare.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Levels/UI/In_Game_Menu.gd" type="Script" id=14]
 
 [sub_resource type="TileSet" id=51]
 0/name = "tilesheet_complete_2X.png 0"
@@ -335,4 +336,24 @@ align = 1
 stream = ExtResource( 13 )
 autoplay = true
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="In_Game_Menu" type="Control" parent="CanvasLayer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 14 )
+
+[node name="Menu_Background" type="ColorRect" parent="CanvasLayer2/In_Game_Menu"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.266667, 0.282353, 0.278431, 0.466667 )
+
+[node name="Quit" type="Button" parent="CanvasLayer2/In_Game_Menu"]
+margin_left = 462.0
+margin_top = 300.0
+margin_right = 562.0
+margin_bottom = 340.0
+text = "Quit"
+
 [connection signal="body_entered" from="Portal_to_2" to="Portal_to_2" method="_on_Portal_entered"]
+[connection signal="pressed" from="CanvasLayer2/In_Game_Menu/Quit" to="CanvasLayer2/In_Game_Menu" method="_on_Quit_pressed"]
