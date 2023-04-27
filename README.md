@@ -5,7 +5,7 @@
 
 Description
 
-  A 2D Platformer game with fantasy theme
+  A fantasy theme 2D Platformer Game
 
 ## Implementation
 
