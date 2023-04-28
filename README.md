@@ -25,6 +25,8 @@ Description
 •	Extra enemies (especially with interesting behaviors)
 •	Report player’s health
 
+Has a not functioning In-Game Menu
+
 ## References
 
 ## Future Development
